@@ -1,0 +1,10 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Iniciar k3s
+    init: |
+      sudo k3s server &
+      sleep 10
+    command: |
+      kubectl get nodes
